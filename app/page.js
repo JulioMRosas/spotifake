@@ -6,10 +6,11 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.musicList}>
-        <Cancion/>
-        <Cancion/>
-        <Cancion/>
-        <Cancion/>
+        <Cancion />
+        <Cancion />
+        <Cancion />
+        <Cancion />
+        <Cancion />
       </div>
     </main>
   );

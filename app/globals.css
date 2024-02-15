@@ -1,23 +1,33 @@
 html,
 body {
     height: 100%;
+    /* Establece la altura del cuerpo y el documento HTML al 100% de la ventana del navegador */
     width: 100%;
+    /* Establece el ancho del cuerpo y el documento HTML al 100% de la ventana del navegador */
     display: flex;
+    /* Establece el cuerpo y el documento HTML como flexbox */
     overflow: hidden;
+    /* Oculta cualquier desbordamiento de contenido */
     margin: 0;
+    /* Elimina los márgenes predeterminados */
     padding: 0;
-
+    /* Elimina el relleno predeterminado */
 }
 
-.container{
+.container {
     min-height: 100%;
+    /* Establece la altura mínima del contenedor al 100% de la ventana del navegador */
     width: 100%;
-    background-color:#082032;
+    /* Establece el ancho del contenedor al 100% de la ventana del navegador */
+    background-color: #082032;
+    /* Establece el color de fondo del contenedor */
 }
 
-.footerContainer{
+.footerContainer {
     background-color: #082032;
+    /* Establece el color de fondo del contenedor del pie de página */
     display: flex;
+    /* Establece el contenedor del pie de página como flexbox */
     justify-content: center;
-
+    /* Centra horizontalmente los elementos dentro del contenedor del pie de página */
 }

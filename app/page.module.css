@@ -1,23 +1,33 @@
-.main{
+.main {
     background-color: #082032;
+    /* Establece el color de fondo del elemento principal */
     width: 100%;
+    /* Establece el ancho del elemento principal al 100% del contenedor padre */
     height: 74%;
+    /* Establece la altura del elemento principal al 74% del contenedor padre */
     color: white;
+    /* Establece el color del texto del elemento principal */
     justify-content: center;
+    /* Centra los elementos horizontalmente dentro del elemento principal */
     align-items: center;
+    /* Centra los elementos verticalmente dentro del elemento principal */
     display: flex;
+    /* Establece el elemento principal como flexbox */
 }
-.musicList { /*Aqui este es el contenedor que donde ira la foto del album y la cancion... */
+
+.musicList {
     background-color: #082032;
+    /* Establece el color de fondo del contenedor de la lista de música */
     overflow: auto;
+    /* Permite el desplazamiento vertical si el contenido supera el tamaño del contenedor */
     max-height: 80%;
+    /* Establece la altura máxima del contenedor de la lista de música al 80% del contenedor padre */
     width: 90%;
+    /* Establece el ancho del contenedor de la lista de música al 90% del contenedor padre */
     display: flex;
+    /* Establece el contenedor de la lista de música como flexbox */
     flex-direction: column;
+    /* Establece la dirección de los elementos secundarios como columna */
     align-items: center;
-
-
-  }
-
-  
-  
+    /* Centra los elementos horizontalmente dentro del contenedor de la lista de música */
+}

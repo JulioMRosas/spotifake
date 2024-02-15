@@ -1,13 +1,22 @@
 .footer {
-  position: relative; /* Establece la posición relativa para el footer */
-  height: 150px; /* Establece la altura del footer */
-  width: 90%; /* Establece el ancho del footer al 90% del contenedor principal */
-  clear: both; /* Limpia los flotadores */
-  background-color: red; /* Establece el color de fondo del footer */
-  align-items: center; /* Centra verticalmente el contenido */
-  text-align: center; /* Centra el texto horizontalmente */
-  justify-content: center; /* Centra horizontalmente el contenido */
-  display: flex; /* Utiliza el modelo de caja flexible */
+  position: relative;
+  /* Establece la posición relativa para el footer */
+  height: 150px;
+  /* Establece la altura del footer */
+  width: 90%;
+  /* Establece el ancho del footer al 90% del contenedor principal */
+  clear: both;
+  /* Limpia los flotadores */
+  background-color: red;
+  /* Establece el color de fondo del footer */
+  align-items: center;
+  /* Centra verticalmente el contenido */
+  text-align: center;
+  /* Centra el texto horizontalmente */
+  justify-content: center;
+  /* Centra horizontalmente el contenido */
+  display: flex;
+  /* Utiliza el modelo de caja flexible */
   color: #ff4c29;
   background-color: #2c394b;
 }
