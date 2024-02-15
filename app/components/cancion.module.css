@@ -15,14 +15,22 @@
         height: 100px; /* Alto del cuadro */
         border: 1px solid black; /* Borde de 2px de grosor y negro */
         border-width: 5px; /* Grosor del borde izquierdo */
-        
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        text-align: center; /* Alinea el texto horizontalmente */
 }
+
 
 .song{
         border: 1px solid black; /* Borde de 2px de grosor y negro */
         border-width: 5px; /* Grosor del borde izquierdo */
         width: 700px;
         height: 100px;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        text-align: center; /* Alinea el texto horizontalmente */
 }
 
 .space{
