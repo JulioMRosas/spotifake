@@ -5,7 +5,12 @@ import { Cancion } from "./components/Cancion";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.musicList}><Cancion/></div>
+      <div className={styles.musicList}>
+        <Cancion/>
+        <Cancion/>
+        <Cancion/>
+        <Cancion/>
+      </div>
     </main>
   );
 }

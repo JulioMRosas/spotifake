@@ -1,0 +1,30 @@
+.songContainer{
+    display: flex;
+    background-color: rgb(85, 0, 255);
+    width: 80%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+
+}
+
+.albumphoto{
+
+        width: 100px; /* Ancho del cuadro */
+        height: 100px; /* Alto del cuadro */
+        border: 1px solid black; /* Borde de 2px de grosor y negro */
+        border-width: 5px; /* Grosor del borde izquierdo */
+        
+}
+
+.song{
+        border: 1px solid black; /* Borde de 2px de grosor y negro */
+        border-width: 5px; /* Grosor del borde izquierdo */
+        width: 700px;
+        height: 100px;
+}
+
+.space{
+    width: 20px;
+}
