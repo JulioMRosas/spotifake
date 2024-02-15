@@ -8,7 +8,7 @@
     display: flex;
 }
 .musicList { /*Aqui este es el contenedor que donde ira la foto del album y la cancion... */
-    background-color: rgb(168, 136, 136);
+    background-color: #082032;
     overflow: auto;
     max-height: 80%;
     width: 90%;
