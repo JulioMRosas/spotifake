@@ -1,0 +1,18 @@
+.main{
+    background-color: #082032;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente */
+    display: flex; 
+}
+.musicList { /*Aqui este es el contenedor que donde ira la foto del album y la cancion... */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente */
+    height: 70vh; /* Establece la altura al 100% del viewport */
+    width: 150vh;
+    background-color: rgb(168, 136, 136);
+  }
+  
+  
