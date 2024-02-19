@@ -14,3 +14,10 @@
     color: #ff4c29;
     /* Establece el color del texto del elemento */
 }
+
+
+.Perfil{
+    background-color: aliceblue;
+    margin: 5%;
+    margin-right: 50px;
+}

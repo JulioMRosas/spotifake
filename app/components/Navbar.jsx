@@ -7,9 +7,9 @@ const Navbar = () => {
       <div className={styles.sidebar}>
         <ul>
           NavBar
-          <li>Categoría 1</li>
-          <li>Categoría 2</li>
-          <li>Categoría 3</li>
+          <li className={styles.Perfil}>Perfil de usuario</li>
+          <li>Biblioteca</li>
+          <li>Configuracion</li>
         </ul>
       </div>
     </nav>
