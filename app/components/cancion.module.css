@@ -32,6 +32,7 @@
     /* Establece el color de fondo */
     color: #ff4c29;
     /* Establece el color del texto */
+    border-radius: 30px;
 }
 
 .song {
@@ -51,6 +52,7 @@
     /* Establece el color de fondo */
     color: #ff4c29;
     /* Establece el color del texto */
+    border-radius: 30px;
 }
 
 .space {
