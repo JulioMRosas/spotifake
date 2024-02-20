@@ -15,9 +15,44 @@
     /* Establece el color del texto del elemento */
 }
 
+.Logo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 5px;
+}
+
+.Imagen{
+    border-radius: 30px;
+}
+
+.Titulo{
+    text-align: center;
+    margin-top: 10px;
+    font-size: larger;
+    color: gold;
+}
 
 .Perfil{
-    background-color: aliceblue;
+    background-color: #082032;
     margin: 5%;
-    margin-right: 50px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+.Biblioteca{
+    background-color: #082032;
+    margin: 5%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+.Configuracion{
+    background-color: #082032;
+    margin: 5%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
 }
