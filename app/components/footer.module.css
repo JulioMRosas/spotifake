@@ -3,7 +3,7 @@
   /* Establece la posición relativa para el footer */
   height: 150px;
   /* Establece la altura del footer */
-  width: 90%;
+  width: 84%;
   /* Establece el ancho del footer al 90% del contenedor principal */
   clear: both;
   /* Limpia los flotadores */
@@ -84,4 +84,8 @@
 @keyframes fill {
   from { width: 0%; }
   to { width: 100%; }
+}
+
+.iconosDeReproduccion{
+  margin-bottom: -25px;
 }

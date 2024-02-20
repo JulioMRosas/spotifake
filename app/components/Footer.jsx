@@ -7,9 +7,11 @@ import SkipNextIcon from "@mui/icons-material/SkipNext";
 export const Footer = () => {
   return (
     <div className={styles.footer}>
-      <SkipPreviousIcon style={{ fontSize: "70px", marginTop: "-55px" }} />
-      <PlayCircleIcon style={{ fontSize: "70px", marginTop: "-55px" }} />
-      <SkipNextIcon style={{ fontSize: "70px", marginTop: "-55px" }} />
+      <div className={styles.iconosDeReproduccion}>
+        <SkipPreviousIcon style={{ fontSize: "70px", marginTop: "-55px" }} />
+        <PlayCircleIcon style={{ fontSize: "70px", marginTop: "-55px" }} />
+        <SkipNextIcon style={{ fontSize: "70px", marginTop: "-55px" }} />
+      </div>
       <div className={styles.ContenedorPadredeFotoeInfo}>
         <div className={styles.divContenedordeAlbumFoto}>
           <div className={styles.divCuadradoBlanco}></div>
