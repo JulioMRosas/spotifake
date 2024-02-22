@@ -8,10 +8,12 @@ import { music } from "./assets/music";
 export default function Home() {
   const songs = music;
   const [currentSong, setCurrentSong] = useState(null);
+  console.log("Home: initial currentSong: ", currentSong);
 
   const playSong = (song) => {
+    console.log("playSong called with:", song);
     console.log("playSong: clicked song", song);
-    setCurrentSong(song); // Update state with clicked song
+    setCurrentSong(song);
   };  
 
   return (
@@ -22,10 +24,7 @@ export default function Home() {
             <Song 
               key={song.id} 
               props={{...song, currentSong, setCurrentSong }}
-              onClick={(event) => {
-                playSong(song);
-                event.stopPropagation();
-              }}
+              onClick={playSong.bind(null, song)}
             />  
           ))
         }

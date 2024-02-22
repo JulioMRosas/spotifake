@@ -8,32 +8,41 @@ export const Song = ({ props }) => {
   const { id, songName, artist, coverPath, filePath, currentSong, setCurrentSong } = props;
   const [audio, setAudio] = useState(null);
 
-  const createAudio = () => {
-    if (currentSong) {
-      setAudio(new Audio(currentSong.filePath));
-    } else {
-      setAudio(null); // Clear audio if no currentSong
-    }
-  };
-  
   useEffect(() => {
     if (currentSong) {
       createAudio();
+    } else {
+      setAudio(null);
     }
-  }, [currentSong]);
+  }, [currentSong, setCurrentSong]);
+  
+  const createAudio = () => {
+    setAudio(new Audio(filePath));
+  };
 
   const playPause = () => {
-    console.log("playPause: currentSong", currentSong);
-    console.log("playPause: audio", audio);
-    if (audio.pause() || audio.currentTime <= 0) {
-      audio.play()
-    }; 
-
-    if (currentSong && currentSong.id === id) {
-      const newAudio = new Audio(filePath);
-      setAudio(newAudio);
-      newAudio.play();
-    };
+    console.log("Song: onClick triggered!");
+    if (audio && currentSong === null) {
+      console.log("both audio and currentSong are null");
+      return
+    }
+    if (audio === null) {
+      console.log("audio is null");
+      return
+    }
+    if (currentSong === null) {
+      console.log("currentSong is null");
+      return
+    }
+    if (audio && currentSong && currentSong.id === id) {
+      if (audio.pause() || audio.currentTime <= 0) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    } else {
+      console.log("playPause: currentSong or audio is null");
+    }
   };
 
   return (
