@@ -5,27 +5,22 @@ import Image from "next/image";
 import styles from "./song.module.css";
 
 export const Song = ({ props }) => {
-  const { id, songName, artist, coverPath, filePath, currentSong } = props;
+  const { id, songName, artist, coverPath, filePath, currentSong, setCurrentSong } = props;
   const [audio, setAudio] = useState(null);
 
+  const createAudio = () => {
+    if (currentSong) {
+      setAudio(new Audio(currentSong.filePath));
+    } else {
+      setAudio(null); // Clear audio if no currentSong
+    }
+  };
+  
   useEffect(() => {
-    console.log("useEffect: currentSong", currentSong);
-    const createAudio = () => { 
-      if (currentSong && currentSong.id === id) {
-        setAudio(new Audio(filePath));
-      }
-    };
-    createAudio();
-    if (currentSong && currentSong.id === id) {
-      props.setCurrentSong(currentSong);
-    };
-    return () => {
-      if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
-      };
-    };
-  }, [currentSong, filePath, props.currentSong]);
+    if (currentSong) {
+      createAudio();
+    }
+  }, [currentSong]);
 
   const playPause = () => {
     console.log("playPause: currentSong", currentSong);

@@ -11,8 +11,8 @@ export default function Home() {
 
   const playSong = (song) => {
     console.log("playSong: clicked song", song);
-    setCurrentSong(song);
-  };
+    setCurrentSong(song); // Update state with clicked song
+  };  
 
   return (
     <main className={styles.main}>
