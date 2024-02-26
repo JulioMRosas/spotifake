@@ -1,20 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { Song } from "./components/Song";
 import { music } from "./assets/music";
 
 export default function Home() {
   const songs = music;
-  const [currentSong, setCurrentSong] = useState(null);
-  console.log("Home: initial currentSong: ", currentSong);
+  const [audio, setAudio] = useState(null);
 
-  const playSong = (song) => {
-    console.log("playSong called with:", song);
-    console.log("playSong: clicked song", song);
-    setCurrentSong(song);
-  };  
+  useEffect (() => {
+    setAudio(new Audio("/CHON-Bubble-Dream.mp3"));
+    return () => {
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      };
+    };
+  }, []);
+
+  const playPause = () => {
+    if (audio.paused || audio.currentTime <= 0) audio.play();
+    else audio.pause;
+  };
 
   return (
     <main className={styles.main}>
@@ -23,8 +31,8 @@ export default function Home() {
           songs.map(song => (
             <Song 
               key={song.id} 
-              props={{...song, currentSong, setCurrentSong }}
-              onClick={playSong.bind(null, song)}
+              songProps={{ ...song, playPause }}
+              onClick={playPause}
             />  
           ))
         }
