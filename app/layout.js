@@ -7,7 +7,7 @@ import { Footer } from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Spotifake",
+  title: "Space Melody",
   description: "Best music player ever",
 };
 
