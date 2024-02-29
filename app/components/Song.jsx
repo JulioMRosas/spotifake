@@ -1,11 +1,9 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "./song.module.css";
 
-export const Song = ({ songProps }) => {
-  const { id, songName, artist, coverPath, filePath, playPause } = songProps;
+export const Song = ({ songProps, onClick }) => {
+  const { id, songName, artist, coverPath } = songProps
 
   return (
     <div className={styles.songContainer}>
@@ -21,7 +19,7 @@ export const Song = ({ songProps }) => {
       <span className={styles.space}></span>
       <div 
         className={styles.song}
-        onClick={playPause}
+        onClick={onClick}
       >
         {songName} - {artist}
       </div>

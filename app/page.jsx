@@ -1,42 +1,39 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import { Song } from "./components/Song";
 import { music } from "./assets/music";
+import ReactAudioPlayer from "react-audio-player";
 
 export default function Home() {
   const songs = music;
-  const [audio, setAudio] = useState(null);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
 
-  useEffect (() => {
-    setAudio(new Audio("/CHON-Bubble-Dream.mp3"));
-    return () => {
-      if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
-      };
-    };
-  }, []);
-
-  const playPause = () => {
-    if (audio.paused || audio.currentTime <= 0) audio.play();
-    else audio.pause;
+  const handlePlayPause = () => {
+    if (currentSong.paused || currentSong.currentTime <= 0) currentSong.play();
+    else currentSong.pause();
   };
 
   return (
     <main className={styles.main}>
       <div className={styles.musicList}>
         {
-          songs.map(song => (
+          songs.map((song, index) => (
             <Song 
               key={song.id} 
-              songProps={{ ...song, playPause }}
-              onClick={playPause}
+              songProps={{ ...song, index }}
+              onClick={() => setCurrentSongIndex(index)}
             />  
           ))
         }
       </div>
+      <ReactAudioPlayer
+        src={songs[currentSongIndex].filePath}
+        onPlay={handlePlayPause}
+        onPause={handlePlayPause}
+        controls
+      />
     </main>
   );
 }
